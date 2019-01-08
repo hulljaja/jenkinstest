@@ -5,8 +5,12 @@ stages {
             steps {
                 sh "${WORKSPACE}/hostname_host.sh"
                 sh 'echo "will this fail"'
-                 
-            }
+                   }
+                post {
+                    failure {
+                        script { env.FAILURE_STAGE = 'Build' }
+                    }
+                }
               
         }
       stage('Stage 2') {
