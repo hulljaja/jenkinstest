@@ -1,11 +1,18 @@
 pipeline {
     agent any
-    stages {
-        stage('Test') {
+stages {
+        stage('Stage 1') {
             steps {
                 sh 'echo "Fail!"; exit 1'
+                 
             }
         }
+      stage('Stage 2') {
+            steps {
+                sh 'echo "Fail 2!"; exit 1'
+             
+            }
+      }
     }
     post {
         always {
