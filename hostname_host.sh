@@ -1,1 +1,1 @@
-ssh 10.1.1.3
+hostname
