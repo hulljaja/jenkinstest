@@ -3,14 +3,14 @@ pipeline {
 stages {
         stage('Stage 1') {
             steps {
-                sh "${WORKDIR}/hostname_host.sh"
+                sh "${WORKSPACE}/hostname_host.sh"
                 sh 'echo "will this fail"'
                  
             }
         }
       stage('Stage 2') {
             steps {
-                sh "${WORKDIR}/ip_host.sh"
+                sh "${WORKSPACE}/ip_host.sh"
                 sh 'echo "will this fail"'
              
             }
