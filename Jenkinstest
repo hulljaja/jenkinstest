@@ -3,14 +3,14 @@ pipeline {
 stages {
         stage('Stage 1') {
             steps {
-                sh 'echo "Fail!"; exit 1'
+                sh 'hostname_host.sh'
                 sh 'echo "will this fail"'
                  
             }
         }
       stage('Stage 2') {
             steps {
-                sh 'echo "Fail 2!"; exit 1'
+                sh 'ip_host.sh'
                 sh 'echo "will this fail"'
              
             }
