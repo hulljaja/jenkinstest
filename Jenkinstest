@@ -6,10 +6,7 @@ stages {
                 sh "${WORKSPACE}/hostname_host.sh"
                 sh 'echo "will this fail"'
                    }
-                 catch(error) {
-                 throw error
-                              }
-              
+                
         }
       stage('Stage 2') {
             steps {
