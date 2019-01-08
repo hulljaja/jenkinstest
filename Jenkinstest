@@ -1,3 +1,6 @@
+def status = sh(script: "${WORKSPACE}/hostname_host.sh", returnStatus: true)
+println "status: " + status
+
 pipeline {
     agent any
 stages {
